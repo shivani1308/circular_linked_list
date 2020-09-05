@@ -1,0 +1,24 @@
+delete from circular linked list
+
+beginning:
+temp =head ;
+head = head --> next ; 
+tail --> next = head ;
+temp --> next = NULL;
+
+end:
+temp =head;
+while(temp --> next ! = tail)
+{
+temp = temp --> next ;
+}
+tail --> next = NULL;
+temp --> next = head ;
+tail = temp ;
+
+specific position:
+scanf("%d",&pos);
+head = temp ;
+for(i=0 ; i<pos-1 ; i++)
+temp = temp--> next ;
+temp -->next = temp --> next --> next;
